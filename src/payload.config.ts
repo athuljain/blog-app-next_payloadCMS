@@ -41,6 +41,7 @@ export default buildConfig({
 
   plugins: [
     vercelBlobStorage({
+      enabled: true,
       collections: {
         media: true,
       },
@@ -48,3 +49,41 @@ export default buildConfig({
     }),
   ],
 })
+
+
+// export default buildConfig({
+//   admin: {
+//     user: Users.slug,
+//     importMap: {
+//       baseDir: path.resolve(dirname),
+//     },
+//   },
+
+//   collections: [Users, Media, Categories, Posts],
+
+//   editor: lexicalEditor(),
+
+//   secret: process.env.PAYLOAD_SECRET || '',
+
+//   db: mongooseAdapter({
+//     url: process.env.DATABASE_URI || '',
+//   }),
+
+//   sharp,
+
+//   typescript: {
+//     outputFile: path.resolve(dirname, 'payload-types.ts'),
+//   },
+
+//  plugins: [
+//   vercelBlobStorage({
+//     enabled: true,
+
+//     collections: {
+//       media: true,
+//     },
+
+//     token: process.env.BLOB_STORAGE_READ_WRITE_TOKEN,
+//   }),
+// ],
+// })

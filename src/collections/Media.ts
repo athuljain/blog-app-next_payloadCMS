@@ -10,6 +10,7 @@ export const Media: CollectionConfig = {
 
   upload: {
     mimeTypes: ['image/*'],
+
     imageSizes: [
       {
         name: 'thumbnail',
@@ -30,6 +31,7 @@ export const Media: CollectionConfig = {
     },
   ],
 }
+
 
 
 // import type { CollectionConfig } from 'payload'
