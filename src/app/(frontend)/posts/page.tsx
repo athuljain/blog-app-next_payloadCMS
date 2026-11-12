@@ -18,6 +18,7 @@ export default async function PostsPage() {
     depth: 1,
     limit: 50,
   })
+  console.log(posts)
 
   return (
     <main className="postsPage">
