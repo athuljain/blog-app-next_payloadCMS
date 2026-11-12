@@ -39,16 +39,16 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
 
- plugins: [
-    vercelBlobStorage({
-      enabled: true,
-     collections: {
-        media: true,
-        categories: true,
-      },
-      token: process.env.BLOB_STORAGE_READ_WRITE_TOKEN,
-    }),
-  ],
+plugins: [
+  vercelBlobStorage({
+    enabled: true,
+    collections: {
+      media: true,
+    },
+    token: process.env.BLOB_READ_WRITE_TOKEN || '',
+    clientUploads: true,
+  }),
+],
 })
 
 
